@@ -21,15 +21,14 @@
 
         .navbar {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            justify-content: flex-end; /* Align items to the right */
             align-items: center;
             background-color: #333;
+            padding: 10px 20px;
             position: fixed;
+            width: 100%;
             top: 0;
-            right: 0;
-            height: 100%;
-            padding: 20px 10px;
+            left: 0;
             z-index: 1000;
         }
 
@@ -38,8 +37,7 @@
             text-decoration: none;
             padding: 15px;
             font-size: 18px;
-            margin: 10px 0;
-            text-align: center;
+            margin-left: 10px; /* Adds space between items */
         }
 
         .navbar a:hover {
@@ -47,7 +45,12 @@
             border-radius: 50%;
         }
 
+        .navbar i {
+            margin-right: 8px;
+        }
+
         .content {
+            padding-top: 60px; /* Ensures content is not overlapped by navbar */
             text-align: center;
         }
 

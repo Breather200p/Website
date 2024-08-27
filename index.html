@@ -16,6 +16,33 @@
             background-image: url('https://github.com/user-attachments/assets/9e62e94c-0ed5-4f77-b6a8-a88309a702b3');
             background-size: cover;
             background-position: center;
+
+             .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 50%;
+        }
+
+        .navbar i {
+            margin-right: 8px;
+        }
+    
+    
+    
         }
         #video-container {
             width: 560px;
@@ -37,7 +64,12 @@
     </style>
 </head>
 <body>
-    
+    <div class="navbar">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+    </div>
     <h1>Check out some of our videos </h1>
     <button onclick="showRandomVideo()">Show Random Video</button>
     <div id="video-container">

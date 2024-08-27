@@ -6,29 +6,30 @@
     <title>The Air Breather</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin: 0;
             height: 100vh;
             background-color: #f5f5f5;
             font-family: Arial, sans-serif;
             background-image: url('https://github.com/user-attachments/assets/9e62e94c-0ed5-4f77-b6a8-a88309a702b3');
             background-size: cover;
             background-position: center;
-        }
-
-
-        .navbar {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: #333;
-            padding: 10px 0;
             position: fixed;
-            width: 100%;
             top: 0;
-            left: 0;
+            right: 0;
+            height: 100%;
+            padding: 20px 10px;
             z-index: 1000;
         }
 
@@ -36,7 +37,9 @@
             color: white;
             text-decoration: none;
             padding: 15px;
-            font-size: 24px;
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
         }
 
         .navbar a:hover {
@@ -44,20 +47,17 @@
             border-radius: 50%;
         }
 
-        .navbar i {
-            margin-right: 8px;
+        .content {
+            text-align: center;
         }
 
-        .content {
-            padding-top: 60px; /* Adjust to avoid overlap with the fixed navbar */
-        }
-    
         #video-container {
             width: 560px;
             height: 315px;
             margin-top: 20px;
             display: none;
         }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -67,25 +67,27 @@
             border: none;
             border-radius: 5px;
         }
+
         h1 {
             color: white;
         }
     </style>
-
+</head>
+<body>
 
     <div class="navbar">
         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
         <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
-        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i>Youtube</a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
         <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
     </div>
 
     <div class="content">
-        
-    <h1>Check out some of our videos </h1>
-    <button onclick="showRandomVideo()">Show Random Video</button>
-    <div id="video-container">
-        <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        <h1>Check out some of our videos</h1>
+        <button onclick="showRandomVideo()">Show Random Video</button>
+        <div id="video-container">
+            <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
     <script>
@@ -96,8 +98,6 @@
             "https://www.youtube.com/embed/vr-4GiQqeqk",
             "https://www.youtube.com/embed/wQzt8eCck9E",
             "https://www.youtube.com/embed/VFIjOqem5-o",
-            
-            
         ];
 
         function showRandomVideo() {
@@ -108,5 +108,6 @@
             videoContainer.style.display = "block";
         }
     </script>
+
 </body>
-    </html>
+</html>
